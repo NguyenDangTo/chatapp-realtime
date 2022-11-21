@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useState} from "react";
 import {BsFillCameraVideoFill, BsThreeDots} from "react-icons/bs";
 import {MdAttachFile, MdSend} from "react-icons/md";
 import {IoMdPersonAdd} from "react-icons/io";
