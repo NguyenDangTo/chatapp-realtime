@@ -14,7 +14,6 @@ const Message = ({isYou, message}) => {
     ref.current?.scrollIntoView({behavior: "smooth"});
   }, [message]);
 
-  console.log(message.date.toDate());
   return (
     <div className={`w-full flex ${isYou ? "justify-end" : "justify-start"}`} ref={ref}>
       <div

@@ -82,7 +82,7 @@ const Chats = () => {
         </div>
       </div>
       <Chat />
-      <form className="w-full relative" onClick={(e) => handleSendMessage(e)}>
+      <form className="w-full relative" onSubmit={(e) => handleSendMessage(e)}>
         <input
           type="text"
           placeholder="Type something..."
@@ -90,18 +90,20 @@ const Chats = () => {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <div className="absolute right-0 top-0 bottom-0 flex h-full items-center justify-center gap-3 p-4">
+        <div className="absolute right-0 top-0 bottom-0 flex h-full items-center justify-center gap-3 p-4 z-10">
           <MdAttachFile className="text-2xl text-slate-600 cursor-pointer hover:text-black transition" />
           <input
-            type="file"
             style={{display: "none"}}
+            type="file"
             id="img"
+            name="img"
+            accept="image/png, image/jpeg"
             onChange={(e) => setImg(e.target.files[0])}
           />
           <label htmlFor="img">
             <RiImageAddFill className="text-2xl text-slate-600 cursor-pointer hover:text-black transition" />
           </label>
-          <button type="submit">
+          <button onClick={handleSendMessage}>
             <MdSend className="text-3xl text-blue-500 cursor-pointer hover:text-blue-700 transition" />
           </button>
         </div>

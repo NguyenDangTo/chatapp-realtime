@@ -88,7 +88,13 @@ const Register = () => {
             autoComplete="on"
             required={true}
           />
-          <input required style={{display: "none"}} type="file" id="img" />
+          <input
+            required
+            style={{display: "none"}}
+            type="file"
+            id="img"
+            accept="image/png, image/jpeg"
+          />
           <label
             htmlFor="img"
             className="w-full flex p-2 justify-center items-center cursor-pointer hover:text-red-500 transition"
