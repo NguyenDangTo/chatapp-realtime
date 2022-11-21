@@ -20,7 +20,7 @@ const Chats = () => {
 
   const handleSendMessage = async (e) => {
     e.preventDefault();
-    if (text === "") {
+    if (text === "" && img === null) {
       return null;
     }
     try {
